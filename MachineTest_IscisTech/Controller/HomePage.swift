@@ -17,7 +17,6 @@ class HomePage: UIViewController, UITextFieldDelegate {
         self.searchTextfield.delegate = self
         setView(iview: self.searchView, customColor: UIColor.black, borderWidth: 2)
         self.fetchArticles()
-        //showToast(message: "Welcome to the app")
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

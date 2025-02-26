@@ -17,6 +17,12 @@ class HomePage: UIViewController, UITextFieldDelegate {
         self.searchTextfield.delegate = self
         setView(iview: self.searchView, customColor: UIColor.black, borderWidth: 2)
         self.fetchArticles()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -121,7 +127,9 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func readMoreTapped(sender: UIButton) {
-        let iData = self.allData[sender.tag]
+        let index = sender.tag
+        let iData = self.allData[index]
+        print("The iData value is \(iData)")
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AboutViewController") as? AboutViewController
         vc?.image_url = iData.image_url
         vc?.image_title = iData.title

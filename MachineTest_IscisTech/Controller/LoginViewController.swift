@@ -18,6 +18,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true) 
     }
     
     func setUpView() {
@@ -41,6 +47,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didLoginBtnTap(_ sender: Any) {
+        view.endEditing(true)
+        
         let enteredUsername = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let enteredPassword = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         

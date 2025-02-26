@@ -7,9 +7,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let defaultCredentials = ["username": "admin", "password": "Temp@123"]
-        UserDefaults.standard.set(defaultCredentials, forKey: "storedCredentials")
         return true
     }
 

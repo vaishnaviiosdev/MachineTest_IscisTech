@@ -4,9 +4,11 @@ import UIKit
 class AboutViewController: UIViewController {
     
     @IBOutlet weak var imageVIEW: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var summaryLbl: UILabel!
     
     var image_url: String?
+    var image_title: String?
     var summary: String?
 
     override func viewDidLoad() {
@@ -20,6 +22,7 @@ class AboutViewController: UIViewController {
         self.imageVIEW.layer.borderColor = UIColor.black.cgColor
         self.imageVIEW.layer.cornerRadius = self.imageVIEW.frame.height / 2
         self.imageVIEW.sd_setImage(with: URL(string: image_url ?? ""), placeholderImage: defaultImage)
+        self.titleLbl.text = self.image_title
         self.summaryLbl.text = summary
     }
     

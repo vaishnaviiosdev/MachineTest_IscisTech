@@ -26,12 +26,6 @@ class LoginViewController: UIViewController {
         self.logInBtn.layer.cornerRadius = self.logInBtn.frame.height / 2
     }
     
-    func showAlertMessage(_ message: String) {
-        let alert = UIAlertController(title: "BookShop", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
-    }
-        
     @IBAction func didEyeBtnTap(_ sender: Any) {
         if iconClick {
             self.passwordTextField.isSecureTextEntry = false
@@ -49,20 +43,22 @@ class LoginViewController: UIViewController {
     @IBAction func didLoginBtnTap(_ sender: Any) {
         let enteredUsername = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let enteredPassword = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let storedCredentials = UserDefaults.standard.dictionary(forKey: "storedCredentials")
-        let storedUserName = storedCredentials?["username"] as? String
-        let storedPassword = storedCredentials?["password"] as? String
-            
-        if enteredUsername.isEmpty || enteredUsername != storedUserName {
-            showAlertMessage("Please enter a valid username")
+        
+        if enteredUsername.isEmpty || enteredUsername != "admin" {
+            showAlertView(title: projectName, message: "Please enter a valid username")
         }
         else if enteredPassword.isEmpty {
-            showAlertMessage("Password cannot be empty")
+            showAlertView(title: projectName, message: "Password cannot be empty")
         }
-        else if enteredPassword != storedPassword {
-            showAlertMessage("Incorrect password")
+        else if enteredPassword != "Temp@123" {
+            showAlertView(title: projectName, message: "Incorrect password")
         }
         else {
+            if UserDefaults.standard.dictionary(forKey: "storedCredentials") == nil {
+                let defaultCredentials = ["username": "admin", "password": "Temp@123"]
+                UserDefaults.standard.set(defaultCredentials, forKey: "storedCredentials")
+            }
+            
             let HomePage = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomePage") as? HomePage
             self.navigationController?.pushViewController(HomePage!, animated: false)
         }

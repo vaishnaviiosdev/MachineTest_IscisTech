@@ -1,6 +1,7 @@
 
 import UIKit
 import SDWebImage
+import HeartButton
 
 class HomePage: UIViewController, UITextFieldDelegate {
     
@@ -14,8 +15,9 @@ class HomePage: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchTextfield.delegate = self
-        setView(iview: self.searchView, customColor: UIColor.black, borderWidth: 3)
+        setView(iview: self.searchView, customColor: UIColor.black, borderWidth: 2)
         self.fetchArticles()
+        //showToast(message: "Welcome to the app")
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -114,6 +116,8 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource {
         cell.imageVIEW.sd_setImage(with: URL(string: article.image_url), placeholderImage: defaultImage)
         cell.readMoreBtn.tag = indexPath.row
         cell.readMoreBtn.addTarget(self, action: #selector(readMoreTapped(sender:)), for: .touchUpInside)
+        cell.favouriteBtn.tag = indexPath.row
+        cell.favouriteBtn.addTarget(self, action: #selector(self.didTapFavorite(_:)), for: .touchUpInside)
         return cell
     }
     
@@ -121,8 +125,22 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource {
         let iData = self.allData[sender.tag]
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AboutViewController") as? AboutViewController
         vc?.image_url = iData.image_url
+        vc?.image_title = iData.title
         vc?.summary = iData.summary
         self.navigationController?.pushViewController(vc!, animated: false)
+    }
+    
+    @objc func didTapFavorite(_ sender: UIButton) {
+        let indexpath = IndexPath(row: sender.tag, section: 0)
+        let cell = self.NewsListTableView.cellForRow(at: indexpath) as! NewListTableViewCell
+        
+        if cell.heartButton.isOn {
+            showAlertView(title: projectName, message: "Removed from favourites")
+        }
+        else {
+            showAlertView(title: projectName, message: "Added to favourites")
+        }
+        cell.heartButton.setOn(!(cell.heartButton.isOn), animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -135,6 +153,8 @@ class NewListTableViewCell: UITableViewCell {
     @IBOutlet weak var authorNameLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var readMoreBtn: UIButton!
+    @IBOutlet weak var heartButton: HeartButton!
+    @IBOutlet weak var favouriteBtn: UIButton!
 }
 
 

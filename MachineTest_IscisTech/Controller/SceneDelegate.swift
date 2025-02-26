@@ -4,20 +4,32 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if UserDefaults.standard.bool(forKey: "hasLaunchedBefore") == false {
-            let initialPageVC = UINavigationController.init(rootViewController: UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController"))
+           
+            let initialPageVC = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController"))
             UIApplication.shared.windows.first?.rootViewController = initialPageVC
             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
             UserDefaults.standard.synchronize()
             initialPageVC.navigationBar.isHidden = true
         }
         else {
-            let landingPageVC = UINavigationController.init(rootViewController: UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomePage"))
-            UIApplication.shared.windows.first?.rootViewController = landingPageVC
-            landingPageVC.navigationBar.isHidden = true
+            if let storedCredentials = UserDefaults.standard.dictionary(forKey: "storedCredentials") as? [String: String],
+               let username = storedCredentials["username"],
+               let password = storedCredentials["password"] {
+                
+                let landingPageVC = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomePage"))
+                UIApplication.shared.windows.first?.rootViewController = landingPageVC
+                landingPageVC.navigationBar.isHidden = true
+            } 
+            else {
+                let initialPageVC = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController"))
+                UIApplication.shared.windows.first?.rootViewController = initialPageVC
+                initialPageVC.navigationBar.isHidden = true
+            }
         }
+        
         APPDELEGATE.window = self.window
         window?.makeKeyAndVisible()
         guard let _ = (scene as? UIWindowScene) else { return }

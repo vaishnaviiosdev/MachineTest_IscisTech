@@ -1,0 +1,6 @@
+framework module Pods_MachineTest_IscisTech {
+  umbrella header "Pods-MachineTest_IscisTech-umbrella.h"
+
+  export *
+  module * { export * }
+}

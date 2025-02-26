@@ -1,9 +1,3 @@
-//
-//  MachineTest_IscisTechUITestsLaunchTests.swift
-//  MachineTest_IscisTechUITests
-//
-//  Created by Neshwa on 25/02/25.
-//
 
 import XCTest
 

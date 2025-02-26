@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3C75C7C303FD2D53A515DF /* Pods_MachineTest_IscisTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92844B3EC60F7BBCC051CD4 /* Pods_MachineTest_IscisTech.framework */; };
+		27045DA42D6EEDE500CA7F2B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27045DA32D6EEDE500CA7F2B /* AboutViewController.swift */; };
 		27D38BE72D6E0FEE00FADF5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38BE62D6E0FEE00FADF5B /* AppDelegate.swift */; };
 		27D38BE92D6E0FEE00FADF5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38BE82D6E0FEE00FADF5B /* SceneDelegate.swift */; };
-		27D38BEB2D6E0FEE00FADF5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38BEA2D6E0FEE00FADF5B /* ViewController.swift */; };
+		27D38BEB2D6E0FEE00FADF5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38BEA2D6E0FEE00FADF5B /* LoginViewController.swift */; };
 		27D38BEE2D6E0FEF00FADF5B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 27D38BED2D6E0FEF00FADF5B /* Base */; };
 		27D38BF02D6E0FF000FADF5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D38BEF2D6E0FF000FADF5B /* Assets.xcassets */; };
 		27D38BF32D6E0FF100FADF5B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 27D38BF22D6E0FF100FADF5B /* Base */; };
 		27D38BFE2D6E0FF100FADF5B /* MachineTest_IscisTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38BFD2D6E0FF100FADF5B /* MachineTest_IscisTechTests.swift */; };
 		27D38C082D6E0FF100FADF5B /* MachineTest_IscisTechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38C072D6E0FF100FADF5B /* MachineTest_IscisTechUITests.swift */; };
 		27D38C0A2D6E0FF100FADF5B /* MachineTest_IscisTechUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38C092D6E0FF100FADF5B /* MachineTest_IscisTechUITestsLaunchTests.swift */; };
+		27D38C172D6E450400FADF5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38C162D6E450400FADF5B /* Constants.swift */; };
+		27D38C192D6E4B2C00FADF5B /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38C182D6E4B2C00FADF5B /* HomePage.swift */; };
+		27D38C1B2D6E4EF600FADF5B /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38C1A2D6E4EF600FADF5B /* NSObject.swift */; };
+		27D38C1D2D6E5CE000FADF5B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38C1C2D6E5CE000FADF5B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27045DA32D6EEDE500CA7F2B /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		27D38BE32D6E0FEE00FADF5B /* MachineTest_IscisTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachineTest_IscisTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D38BE62D6E0FEE00FADF5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D38BE82D6E0FEE00FADF5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27D38BEA2D6E0FEE00FADF5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27D38BEA2D6E0FEE00FADF5B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		27D38BED2D6E0FEF00FADF5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27D38BEF2D6E0FF000FADF5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D38BF22D6E0FF100FADF5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		27D38C032D6E0FF100FADF5B /* MachineTest_IscisTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MachineTest_IscisTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D38C072D6E0FF100FADF5B /* MachineTest_IscisTechUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTest_IscisTechUITests.swift; sourceTree = "<group>"; };
 		27D38C092D6E0FF100FADF5B /* MachineTest_IscisTechUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTest_IscisTechUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27D38C162D6E450400FADF5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		27D38C182D6E4B2C00FADF5B /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		27D38C1A2D6E4EF600FADF5B /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		27D38C1C2D6E5CE000FADF5B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		51C3401055A9303566F49B9E /* Pods-MachineTest_IscisTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineTest_IscisTech.release.xcconfig"; path = "Target Support Files/Pods-MachineTest_IscisTech/Pods-MachineTest_IscisTech.release.xcconfig"; sourceTree = "<group>"; };
+		57859914C93F7A59C455D7D7 /* Pods-MachineTest_IscisTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineTest_IscisTech.debug.xcconfig"; path = "Target Support Files/Pods-MachineTest_IscisTech/Pods-MachineTest_IscisTech.debug.xcconfig"; sourceTree = "<group>"; };
+		B92844B3EC60F7BBCC051CD4 /* Pods_MachineTest_IscisTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MachineTest_IscisTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3C75C7C303FD2D53A515DF /* Pods_MachineTest_IscisTech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +91,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27045DA52D6F032200CA7F2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27D38C1C2D6E5CE000FADF5B /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27045DA62D6F032E00CA7F2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27D38BF12D6E0FF100FADF5B /* LaunchScreen.storyboard */,
+				27D38BEC2D6E0FEF00FADF5B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27045DA72D6F033B00CA7F2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27045DA32D6EEDE500CA7F2B /* AboutViewController.swift */,
+				27D38C182D6E4B2C00FADF5B /* HomePage.swift */,
+				27D38BEA2D6E0FEE00FADF5B /* LoginViewController.swift */,
+				27D38BE82D6E0FEE00FADF5B /* SceneDelegate.swift */,
+				27D38BE62D6E0FEE00FADF5B /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27045DA82D6F039400CA7F2B /* Constant + NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				27D38C1A2D6E4EF600FADF5B /* NSObject.swift */,
+				27D38C162D6E450400FADF5B /* Constants.swift */,
+			);
+			path = "Constant + NSObject";
+			sourceTree = "<group>";
+		};
+		27045DA92D6F03BD00CA7F2B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				27D38BEF2D6E0FF000FADF5B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		27D38BDA2D6E0FEE00FADF5B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +144,8 @@
 				27D38BFC2D6E0FF100FADF5B /* MachineTest_IscisTechTests */,
 				27D38C062D6E0FF100FADF5B /* MachineTest_IscisTechUITests */,
 				27D38BE42D6E0FEE00FADF5B /* Products */,
+				492E489B4DEBEB2A9C46527A /* Pods */,
+				FFCC4E14AF64A4BF8412AE50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +162,11 @@
 		27D38BE52D6E0FEE00FADF5B /* MachineTest_IscisTech */ = {
 			isa = PBXGroup;
 			children = (
-				27D38BE62D6E0FEE00FADF5B /* AppDelegate.swift */,
-				27D38BE82D6E0FEE00FADF5B /* SceneDelegate.swift */,
-				27D38BEA2D6E0FEE00FADF5B /* ViewController.swift */,
-				27D38BEC2D6E0FEF00FADF5B /* Main.storyboard */,
-				27D38BEF2D6E0FF000FADF5B /* Assets.xcassets */,
-				27D38BF12D6E0FF100FADF5B /* LaunchScreen.storyboard */,
+				27045DA92D6F03BD00CA7F2B /* Assets */,
+				27045DA82D6F039400CA7F2B /* Constant + NSObject */,
+				27045DA52D6F032200CA7F2B /* Model */,
+				27045DA62D6F032E00CA7F2B /* View */,
+				27045DA72D6F033B00CA7F2B /* Controller */,
 				27D38BF42D6E0FF100FADF5B /* Info.plist */,
 			);
 			path = MachineTest_IscisTech;
@@ -127,6 +189,23 @@
 			path = MachineTest_IscisTechUITests;
 			sourceTree = "<group>";
 		};
+		492E489B4DEBEB2A9C46527A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57859914C93F7A59C455D7D7 /* Pods-MachineTest_IscisTech.debug.xcconfig */,
+				51C3401055A9303566F49B9E /* Pods-MachineTest_IscisTech.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FFCC4E14AF64A4BF8412AE50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B92844B3EC60F7BBCC051CD4 /* Pods_MachineTest_IscisTech.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27D38C0D2D6E0FF100FADF5B /* Build configuration list for PBXNativeTarget "MachineTest_IscisTech" */;
 			buildPhases = (
+				0F8F194C1D99D08C0F419AB9 /* [CP] Check Pods Manifest.lock */,
 				27D38BDF2D6E0FEE00FADF5B /* Sources */,
 				27D38BE02D6E0FEE00FADF5B /* Frameworks */,
 				27D38BE12D6E0FEE00FADF5B /* Resources */,
+				783807B812B6204B69D57412 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,14 +334,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F8F194C1D99D08C0F419AB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MachineTest_IscisTech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		783807B812B6204B69D57412 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MachineTest_IscisTech/Pods-MachineTest_IscisTech-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MachineTest_IscisTech/Pods-MachineTest_IscisTech-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MachineTest_IscisTech/Pods-MachineTest_IscisTech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27D38BDF2D6E0FEE00FADF5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D38BEB2D6E0FEE00FADF5B /* ViewController.swift in Sources */,
+				27D38C1D2D6E5CE000FADF5B /* Model.swift in Sources */,
+				27D38C192D6E4B2C00FADF5B /* HomePage.swift in Sources */,
+				27D38BEB2D6E0FEE00FADF5B /* LoginViewController.swift in Sources */,
 				27D38BE72D6E0FEE00FADF5B /* AppDelegate.swift in Sources */,
+				27D38C1B2D6E4EF600FADF5B /* NSObject.swift in Sources */,
 				27D38BE92D6E0FEE00FADF5B /* SceneDelegate.swift in Sources */,
+				27045DA42D6EEDE500CA7F2B /* AboutViewController.swift in Sources */,
+				27D38C172D6E450400FADF5B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -425,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -437,18 +565,22 @@
 		};
 		27D38C0E2D6E0FF100FADF5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57859914C93F7A59C455D7D7 /* Pods-MachineTest_IscisTech.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MachineTest_IscisTech/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Newsify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,18 +596,22 @@
 		};
 		27D38C0F2D6E0FF100FADF5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C3401055A9303566F49B9E /* Pods-MachineTest_IscisTech.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MachineTest_IscisTech/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Newsify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

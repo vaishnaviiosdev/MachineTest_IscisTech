@@ -1,36 +1,47 @@
-//
-//  MachineTest_IscisTechTests.swift
-//  MachineTest_IscisTechTests
-//
-//  Created by Neshwa on 25/02/25.
-//
 
 import XCTest
 @testable import MachineTest_IscisTech
 
 final class MachineTest_IscisTechTests: XCTestCase {
 
+    var loginViewController: LoginViewController!
+    
+    let validUsername = "admin"
+    let validPassword = "Temp@123"
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        UserDefaults.standard.removeObject(forKey: "storedCredentials")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        loginViewController = storyboard.instantiateViewController(identifier: "LoginViewController") as? LoginViewController
+        loginViewController.loadViewIfNeeded()
+        UserDefaults.standard.set(["username": validUsername, "password": validPassword], forKey: "storedCredentials")
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        UserDefaults.standard.removeObject(forKey: "storedCredentials")
+        loginViewController = nil
+        super.tearDown()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testLoginCredentials() {
+        let enteredUsername = "admin"
+        let enteredPassword = "Temp@123"
+        let storedCredentials = UserDefaults.standard.dictionary(forKey: "storedCredentials")
+        let storedUserName = storedCredentials?["username"] as? String
+        let storedPassword = storedCredentials?["password"] as? String
+        
+        // Check if the entered username matches the stored username
+        XCTAssertEqual(enteredUsername, storedUserName, "The entered username does not match the stored username.")
+        
+        // Check if the entered password matches the stored password
+        XCTAssertEqual(enteredPassword, storedPassword, "The entered password does not match the stored password.")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    private func simulateLogin(username: String, password: String) {
+        loginViewController.emailTextField.text = username
+        loginViewController.passwordTextField.text = password
+        loginViewController.didLoginBtnTap(loginViewController as Any)
     }
-
 }
+
